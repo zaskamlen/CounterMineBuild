@@ -1,9 +1,0 @@
-name: CounterMineBuild
-version: '${version}'
-main: net.zaskamlen.counterminebuild.CounterMineBuild
-api-version: '1.20'
-commands:
-  region:
-  example:
-    description: Executes the example command
-    usage: /example
