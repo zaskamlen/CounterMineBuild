@@ -1,7 +1,7 @@
 package net.zaskamlen.counterminebuild.region;
 
 import net.zaskamlen.counterminebuild.utils.text.TextUtil;
-import net.zaskamlen.counterminebuild.world.World;
+import net.zaskamlen.counterminebuild.world.WorldConverter;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -302,7 +302,8 @@ public class RegionCommand implements CommandExecutor, TabCompleter {
     private void handleConvert(Player player, String[] args) {
         if (args.length == 2) {
             String name = args[1];
-            World.convert(name);
+            WorldConverter worldConverter = new WorldConverter();
+            worldConverter.convert(name);
         } else {
             player.sendMessage(TextUtil.color("&cНедостаточно аргументов"));
             player.sendMessage(TextUtil.color("&cИспользование: /region convert <название>"));

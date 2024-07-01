@@ -1,5 +1,6 @@
 package net.zaskamlen.counterminebuild;
 
+import net.minestom.server.MinecraftServer;
 import net.zaskamlen.counterminebuild.command.Executor;
 import net.zaskamlen.counterminebuild.command.Tabs;
 import net.zaskamlen.counterminebuild.menu.MenuListener;
@@ -15,6 +16,8 @@ public final class CounterMineBuild extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
+
+        MinecraftServer.init();
 
         Executor.createCommand("example")
 
